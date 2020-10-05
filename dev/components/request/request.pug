@@ -1,0 +1,17 @@
+include ../_ui/input/input
+include ../_ui/button/button
+include ../_ui/checkbox/checkbox
+
+mixin request
+  section.request.container
+    .wrapper
+      .request__content
+        p.request__heading Оставьте заявку, и мы подберем самый выгодный тариф для Вашего бизнеса
+        form.request__form(action="")
+          .request__form-row
+            +input('text', 'name', 'Введите ваше имя', '', true)
+            +input('tel', 'phone', 'Введите телефон', '', true)
+          .request__form-row
+            +input('email', 'email', 'Введите ваш e-mail', '', true)
+            +button-primary('submit', 'Отправить заявку', 'request__form-btn')
+          +checkbox('policy', 'request__form-checkbox', true, true, 'Согласен с обработкой <a href="#">персональных данных</a>')

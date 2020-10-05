@@ -1,0 +1,38 @@
+.header
+  padding: 1.822916667vw 0
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+  &__logo
+    width: 9.427083333vw
+    height: 3.385416667vw
+  &__info
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
+    align-items: center
+  &__email
+    margin-right: 3.75vw
+    font-size: 0.9375vw
+  &__phone
+    position: relative
+    margin-right: 1.822916667vw
+    padding-left: 1.302083333vw
+    font:
+      weight: 700
+      size: 0.9375vw
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 2px
+      left: 0
+      width: 0.78125vw
+      height: 1.145833333vw
+      background:
+        image: url('../img/icons/phone.svg')
+        position: center
+        size: contain
+        repeat: no-repeat

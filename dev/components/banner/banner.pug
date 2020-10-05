@@ -1,0 +1,13 @@
+include ../_ui/button/button
+
+mixin banner
+  section.banner.container
+    .wrapper
+      .banner__card
+        .banner__sale
+        .banner__badge
+        .banner__content
+          p.banner__heading Скидка до 1,5 рублей <br>с литра на все виды топлива!
+          p.banner__desc Успейте оформить договор до&nbsp;30.09.2020!
+          +button-primary('link', 'Заказать карты на специальных условиях', '', {link: 'javascript:void(0)'})
+        p.banner__disclaimer Бесплатные дополнительные сервисы: оплата через мобильное приложение, личный кабинет, смс-уведомления, предупреждения по картам

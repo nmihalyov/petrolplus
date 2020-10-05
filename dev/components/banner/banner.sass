@@ -1,0 +1,75 @@
+.banner
+  margin-bottom: 6.25vw
+  &__card
+    position: relative
+    padding: 6.25vw 5.989583333vw
+    border-radius: 0.5208333333vw
+    background-image: linear-gradient(102.81deg, #00CFCC 0%, #3AEDEA 100%)
+    color: #fff
+  &__sale1
+    position: absolute
+    top: 0.614583333vw
+    right: 0
+    width: 37.65625vw
+    height: 18.48958333vw
+    font-size: 20.83333333vw
+    font-weight: 700
+  &__sale
+    position: absolute
+    top: 6.614583333vw
+    right: 0
+    width: 37.65625vw
+    height: 18.48958333vw
+    background:
+      image: url('../img/banner-sale.png')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__badge
+    overflow: hidden
+    position: absolute
+    display: block
+    top: 19vw
+    right: 30.6vw
+    width: 7.291666667vw
+    height: 7.291666667vw
+    border-radius: 50%
+    backdrop-filter: blur(25px)
+    &:after
+      z-index: 2
+      content: ''
+      position: absolute
+      display: block
+      top: 50%
+      left: 50%
+      width: 5.9375vw
+      height: 5.9375vw
+      transform: translate(-50%, -50%)
+      background:
+        image: url('../img/sale-badge.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &:before
+      z-index: 1
+      content: '1'
+      position: absolute
+      display: block
+      bottom: 0
+      left: 0
+      line-height: 1
+      background-color: rgba(255, 255, 255, .3)
+      filter: blur(15px)
+      font:
+        size: 22.91666667vw
+        weight: 700
+  &__content
+    width: 26.04166667vw
+    margin-bottom: 5.208333333vw
+  &__heading
+    font-weight: 700
+  &__desc
+    margin-bottom: 3.125vw
+  &__disclaimer
+    line-height: 1.302083333vw
+    font-size: 0.9375vw

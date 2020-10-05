@@ -1,0 +1,54 @@
+.checkbox
+  display: flex
+  flex-flow: row nowrap
+  cursor: pointer
+  &__input
+    opacity: 0
+    visibility: hidden
+    width: 0
+    height: 0
+    margin: 0
+    &:checked ~ .checkbox__box
+      background-color: $blue
+      .checkbox__box-mark
+        &:before
+          height: 0.2083333333vw
+          transition: all .15s ease-in
+        &:after
+          width: 0.5208333333vw
+          transition: all .15s ease-in .15s
+  &__box
+    position: relative
+    flex-shrink: 0
+    width: 1.40625vw
+    height: 1.40625vw
+    border: 0.1041666667vw solid $blue
+    border-radius: 50%
+    transition: background-color .3s ease
+    &-mark
+      position: relative
+      top: 0.4166666667vw
+      left: 0.3125vw
+      width: 0.5208333333vw
+      height: 0.2083333333vw
+      transform: rotate(-45deg)
+      &:before,
+      &:after
+        content: ""
+        display: block
+        background-color: #fff
+      &:before
+        width: 0.1041666667vw
+        height: 0
+        transition: all .15s ease-out .15s
+      &:after
+        top: 0.2604166667vw
+        height: 0.1041666667vw
+        width: 0
+        transition: all .15s ease-out
+  &__text
+    margin-left: 0.625vw
+    font-size: 1.041666667vw
+    a
+      color: $blue
+      text-decoration-color: $blue

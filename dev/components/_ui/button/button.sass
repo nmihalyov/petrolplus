@@ -1,0 +1,63 @@
+.button
+  display: inline-flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  padding: 0 1.822916667vw
+  border-radius: 0.2604166667vw
+  border: none
+  text-decoration: none
+  cursor: pointer
+  outline: 0
+  font:
+    weight: 500
+    size: 1.041666667vw
+  &--primary
+    position: relative
+    height: 4.0625vw
+    padding: 0 2.083333333vw
+    background-color: $yellow
+    transition: all .3s ease
+    color: $black
+    text-align: center
+    &:hover
+      background-color: lighten($yellow, 5)
+    &:active
+      transition: none
+      background-color: darken($yellow, 7)
+  &--arrow
+    padding: 0 7.291666667vw 0 2.083333333vw
+    text-align: left
+    &:hover
+      &:after
+        right: 1.822916667vw
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: 2.083333333vw
+      width: 1.614583333vw
+    &:before
+      top: calc(50% - 0.05208333335vw)
+      height: 0.1041666667vw
+      background-color: $black
+    &:after
+      top: calc(50% - 0.4166666667vw)
+      height: 0.8333333333vw
+      transition: right .3s ease
+      background:
+        image: url('../img/icons/arrow.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &--secondary
+    height: 3.229166667vw
+    border: 1px solid $grey
+    transition: all .3s ease
+    color: $black
+    &:hover
+      background-color: $grey
+    &:active
+      transition: none
+      background-color: darken($grey, 5)

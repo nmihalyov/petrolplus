@@ -1,0 +1,14 @@
+mixin tabs
+  section.tabs.container
+    .wrapper
+      .tabs__block.js-tabs
+        .tabs__items
+          p.tabs__item.js-tab-active.js-tab(data-tab="calc") Рассчитать экономию
+          p.tabs__item.js-tab(data-tab="map") Посмотреть список АЗС на карте
+        .tabs__contents
+          .tabs__content.js-tab-content(data-tab="calc")
+            p.tabs__content-heading Рассчитайте экономию в&nbsp;нашем калькуляторе
+            +button-primary-arrow('link', 'Расчитать экономию', '', {link: 'javascript:void(0)'})
+          .tabs__content.js-tab-content(data-tab="map")
+            p.tabs__content-heading Самая большая сеть приема в режиме онлайн — более 13 000 АЗС <br>повсей России Online
+            +button-primary-arrow('link', 'Посмотреть список АЗС на карте', '', {link: 'javascript:void(0)'})
