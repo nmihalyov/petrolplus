@@ -9,9 +9,9 @@ mixin request
         p.request__heading Оставьте заявку, и мы подберем самый выгодный тариф для Вашего бизнеса
         form.request__form(action="")
           .request__form-row
-            +input('text', 'name', 'Введите ваше имя', '', true)
-            +input('tel', 'phone', 'Введите телефон', '', true)
+            +input('text', 'name', 'Введите ваше имя', 'request__form-input', true)
+            +input('tel', 'phone', 'Введите телефон', 'request__form-input', true)
           .request__form-row
-            +input('email', 'email', 'Введите ваш e-mail', '', true)
+            +input('email', 'email', 'Введите ваш e-mail', 'request__form-input', true)
             +button-primary('submit', 'Отправить заявку', 'request__form-btn')
           +checkbox('policy', 'request__form-checkbox', true, true, 'Согласен с обработкой <a href="#">персональных данных</a>')

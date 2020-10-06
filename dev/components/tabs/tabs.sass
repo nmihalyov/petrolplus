@@ -57,3 +57,53 @@
       font:
         size: 4.166666667vw
         weight: 700
+
+@media only screen and (max-width: $adaptive)
+  .tabs
+    margin-bottom: 12.5vw
+    &__block
+      width: 100vw
+      margin-left: -6.25vw
+    &__items
+      display: block
+      white-space: nowrap
+      overflow: auto
+      width: 100vw
+      margin: 0 0 9.375vw 0
+      padding: 0 6.25vw 0 6.25vw
+      border-bottom-width: 0.9375vw
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+    &__item
+      display: inline-block
+      padding-bottom: 0
+      line-height: 2.5
+      &:after
+        bottom: 0
+        height: 0.9375vw
+    &__content
+      padding: 0 6.25vw
+      &[data-tab="calc"]
+        padding-bottom: 78.125vw
+        background:
+          position: -117vw 30vw
+          size: 230vw
+        .tabs__content-heading
+          width: 80%
+      &[data-tab="map"]
+        padding-bottom: 15.625vw
+        background:
+          image: url('../img/map-mobile.png')
+          size: cover
+          position: bottom center
+          repeat: no-repeat
+        .tabs__content-heading
+          width: 100%
+        .button
+          margin-top: 93.75vw
+      &-heading
+        margin-bottom: 9.375vw
+        line-height: 1.025
+        font-size: 9.0625vw

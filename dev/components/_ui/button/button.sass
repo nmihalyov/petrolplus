@@ -61,3 +61,25 @@
     &:active
       transition: none
       background-color: darken($grey, 5)
+
+@media only screen and (max-width: $adaptive)
+  .button
+    width: 100%
+    height: 18.75vw
+    text-align: center
+    border-radius: 1.5625vw
+    font-size: 5vw
+    &--primary
+    &--arrow
+      line-height: 1.375
+      padding-right: 21.875vw
+      &:hover
+        &:after
+          right: 13.4375vw
+      &:before
+        display: none
+      &:after
+        top: calc(50% - 2.5vw)
+        right: 13.4375vw
+        width: 9.6875vw
+        height: 5vw

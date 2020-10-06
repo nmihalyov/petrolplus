@@ -15,16 +15,22 @@
     width: calc(100% + 2.1875vw)
     margin-left: -1.09375vw
   &__item
+    overflow: hidden
+    position: relative
+    width: calc(33.3333333% - 2.1875vw)
+    margin: 0 1.09375vw 2.1875vw 1.09375vw
+    border-radius: 0.5208333333vw
+    &:hover
+      .advantages__content
+        opacity: 1
+  &__main
     display: flex
     flex-flow: row nowrap
     justify-content: flex-start
     align-items: center
-    width: calc(33.3333333% - 2.1875vw)
     height: 8.59375vw
-    margin: 0 1.09375vw 2.1875vw 1.09375vw
     padding-left: 2.083333333vw
     background-color: #F0F9FA
-    border-radius: 0.5208333333vw
   &__icon
     position: relative
     width: 4.479166667vw
@@ -37,10 +43,13 @@
         background-image: url('../img/icons/pay.svg')
     &[data-icon="economy"]
       &:before
-        background-image: url('../img/icons/economy.svg')
+        background-image: url('../img/icons/economy.png')
     &[data-icon="control"]
       &:before
         background-image: url('../img/icons/control.svg')
+    &[data-icon="term"]
+      &:before
+        background-image: url('../img/icons/term.svg')
     &[data-icon="services"]
       &:before
         background-image: url('../img/icons/services.svg')
@@ -64,6 +73,20 @@
     font:
       size: 1.041666667vw
       weight: 700
+  &__content
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: 100%
+    padding-left: 2.083333333vw
+    background-color: #F0F9FA
+    transition: opacity .3s ease
   &__list
     margin: 0
     padding: 0
@@ -85,3 +108,66 @@
         height: 0.3645833333vw
         border-radius: 50%
         background-color: $blue
+
+@media only screen and (max-width: $adaptive)
+  .advantages
+    margin-bottom: 12.5vw
+    &__title
+      margin-bottom: 6.25vw
+      font-size: 9.375vw
+    &__grid
+      flex-flow: column nowrap
+      width: 100%
+      margin: 0
+    &__item
+      width: 100%
+      border-radius: 3.125vw
+      &--active .advantages__main:after
+        transform: translateY(-50%) rotate(180deg)
+    &__main
+      position: relative
+      height: 23.125vw
+      padding: 2.5vw
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        right: 5.625vw
+        width: 3.125vw
+        height: 2.1875vw
+        transform: translateY(-50%)
+        transition: transform .3s ease
+        background:
+          image: url('../img/icons/caret.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &__icon
+      width: 18.125vw
+      height: 18.125vw
+      margin-right: 5.3125vw
+      border-radius: 1.875vw
+      &:before
+        width: 16.25vw
+        height: 12.5vw
+    &__heading
+      line-height: 1.25
+      font-size: 5vw
+    &__content
+      position: static
+      opacity: 1
+      display: none
+      padding: 7.8125vw 8.75vw 9.375vw 10.9375vw
+      border-top: 0.3125vw solid #DDECEE
+    &__list
+      &-item
+        line-height: 1.25
+        font-size: 3.75vw
+        &:before
+          top: 1.25vw
+          left: -3vw
+          width: 1.5625vw
+          height: 1.5625vw
+        &:not(:last-child)
+          margin-bottom: 1.5625vw

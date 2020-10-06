@@ -30,16 +30,62 @@
     margin-bottom: 3.333333333vw
     line-height: 1.7
   &__tags
-    display: flex
-    flex-flow: row wrap
-    justify-content: start
-    align-items: flex-start
     width: calc(100% + 1.041666667vw)
     margin-bottom: 2.604166667vw
+    &-inner
+      display: flex
+      flex-flow: row wrap
+      justify-content: start
+      align-items: flex-start
   &__tag
     margin: 0 1.041666667vw 1.041666667vw 0
     padding: 0.7291666667vw 1.302083333vw
     border-radius: 10vw
     background-color: #fff
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.05)
     line-height: 1.1
     font-size: 0.9375vw
+
+@media only screen and (max-width: $adaptive)
+  .hero
+    margin-bottom: 15.625vw
+    padding: 10.3125vw 0 0 0
+    &__wrapper
+      padding-bottom: 59.375vw !important
+      background:
+        image: url('../img/hero-card.png')
+        size: 87.5vw
+        position: bottom center
+        repeat: no-repeat
+    &__cards
+      display: none
+    &__content
+      width: 100%
+    &__heading
+      margin-bottom: 4.6875vw
+      text-align: center
+      font-size: 9.375vw
+    &__desc
+      margin-bottom: 4.6875vw
+      text-align: center
+      font-size: 6.25vw
+    &__tags
+      white-space: nowrap
+      overflow: auto
+      width: 100vw
+      margin: 0 -6.25vw 6.25vw -6.25vw
+      padding: 0 6.25vw 0 6.25vw
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+      &-inner
+        width: 217vw
+    &__tag
+      margin: 0 3.125vw 3.125vw 0
+      padding: 2.5vw 4.0625vw
+      border-radius: 10vw
+      background-color: #fff
+      box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.05)
+      line-height: 1.5
+      font-size: 3.75vw

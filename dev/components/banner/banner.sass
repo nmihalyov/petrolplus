@@ -73,3 +73,45 @@
   &__disclaimer
     line-height: 1.302083333vw
     font-size: 0.9375vw
+
+@media only screen and (max-width: $adaptive)
+  .banner
+    margin-bottom: 0
+    &__card
+      width: 100vw
+      margin-left: -6.25vw
+      padding: 12.5vw 6.25vw 
+    &__badge
+      top: 49vw
+      right: 28.6vw
+      width: 21.25vw
+      height: 21.25vw
+      backdrop-filter: none
+      background-color: rgba(255, 255, 255, 0.3)
+      &:before
+        display: none
+      &:after
+        width: 17.1875vw
+        height: 17.1875vw
+    &__sale
+      top: 60vw
+      left: 6.25vw
+      right: auto
+      width: 86.5625vw
+      height: 38.125vw
+      background-image: url('../img/banner-sale-mobile.png')
+    &__content
+      width: 100%
+      margin-bottom: 9.375vw
+      text-align: center
+    &__heading,
+    &__desc
+      display: inline
+      line-height: 1.25
+      font-size: 5.625vw
+    .button
+      margin-top: 62.5vw
+    &__disclaimer
+      text-align: center
+      line-height: 1.25
+      font-size: 3.75vw

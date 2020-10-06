@@ -22,3 +22,26 @@
       height: 3.75vw
     &-checkbox
       justify-content: center
+
+@media only screen and (max-width: $adaptive)
+  .request
+    margin-bottom: 0
+    &__content
+      width: 100vw
+      margin-left: -6.25vw
+      padding: 13.125vw 6.25vw 15.625vw 6.25vw
+      border-radius: 0
+    &__heading
+      width: 100%
+      margin-bottom: 8.125vw
+    &__form
+      width: 100%
+      &-row
+        flex-flow: column nowrap
+        justify-content: flex-start
+        align-items: stretch
+        margin-bottom: 0
+      &-input
+        margin-bottom: 3.125vw
+      &-btn
+        margin-bottom: 3.125vw
