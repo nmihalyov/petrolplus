@@ -11,3 +11,7 @@ mixin button-primary-arrow(type, text, className, options)
 mixin button-secondary(type, text, className, options)
   if type === 'link'
     a.button.button--secondary(class=`${className || ''}`, href=options.link)= text
+
+mixin button-tertiary-arrow(type, text, className, options)
+  if type === 'link'
+    a.button.button--tertiary.button--arrow(class=`${className || ''}`, href=options.link)= text

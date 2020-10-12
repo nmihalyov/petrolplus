@@ -1,0 +1,20 @@
+include ../components/header/header
+include ../components/reso-hero/reso-hero
+include ../components/reso-advantages/reso-advantages
+include ../components/reso-request/reso-request
+include ../components/reso-faq/reso-faq
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title РЕСО
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header('Перезвоните мне')
+      +reso-hero
+      +reso-advantages
+      +reso-request
+      +reso-faq

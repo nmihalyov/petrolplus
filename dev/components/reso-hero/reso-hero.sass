@@ -1,0 +1,109 @@
+.reso-hero
+  background-color: #00CFCC
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding-top: 5.729166667vw !important
+    padding-bottom: 5.729166667vw !important
+    background:
+      image: url('../img/reso-hero.png')
+      size: contain
+      position: 7vw center
+      repeat: no-repeat
+  &__content
+    width: 600px
+    color: #fff
+  &__heading
+    margin-bottom: 1.5625vw
+    line-height: 1.125
+    font:
+      szie: 4.166666667vw
+      weight: 900
+  &__desc
+    width: 25.52083333vw
+    margin-bottom: 3.645833333vw
+    line-height: 1.5
+    font-size: 1.5625vw
+  &__card
+    width: 23.4375vw
+    padding: 3.125vw 3.385416667vw 2.604166667vw 3.802083333vw
+    background-color: #fff
+    border-radius: 0.8333333333vw
+    box-shadow: 0px 25px 130px rgba(0, 150, 148, 0.3)
+    &-item
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      &:not(:last-child)
+        margin-bottom: 1.041666667vw
+    &-icon
+      flex-shrink: 0
+      width: 3.385416667vw
+      height: 3.645833333vw
+      margin-right: 1.5625vw
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &[data-icon="manager"]
+        background-image: url('../img/icons/manager.svg')
+      &[data-icon="delivery"]
+        background-image: url('../img/icons/delivery.svg')
+      &[data-icon="remote"]
+        background-image: url('../img/icons/remote.svg')
+      &[data-icon="specialist"]
+        background-image: url('../img/icons/specialist.png')
+    &-text
+      padding: 1.041666667vw 0
+      line-height: 1.44
+      font-size: 0.9375vw
+
+@media only screen and (max-width: $adaptive)
+  .reso-hero
+    &__wrapper
+      position: relative
+      flex-flow: column nowrap
+      height: 193.75vw
+      padding-top: 9.375vw
+      background:
+        size: cover
+        position: center
+    &__content
+      width: 100%
+    &__heading
+      width: 68.75vw
+      margin: 0 auto 4.6875vw auto
+      text-align: center
+      font:
+        weight: 600
+        size: 9.375vw
+    &__desc
+      width: 100%
+      margin-bottom: 37.5vw
+      text-align: center
+      font-size: 6.25vw
+    &__card
+      position: absolute
+      top: 148.4375vw
+      left: 6.25vw
+      width: calc(100% - 12.5vw)
+      padding: 15.625vw
+      border-radius: 3.125vw
+      box-shadow: none
+      &-item
+        flex-flow: column nowrap
+        justify-content: flex-start
+        align-items: center
+        &:not(:last-child)
+          margin-bottom: 9.375vw
+      &-icon
+        width: 20.3125vw
+        height: 21.875vw
+        margin-bottom: 5.3125vw
+      &-text
+        text-align: center
+        line-height: 1.25
+        font-size: 3.75vw

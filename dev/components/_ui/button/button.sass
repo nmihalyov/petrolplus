@@ -61,6 +61,35 @@
     &:active
       transition: none
       background-color: darken($grey, 5)
+  &--tertiary
+    position: relative
+    height: 4.0625vw
+    padding: 0 2.083333333vw
+    border: 1px solid $blue
+    transition: all .3s ease
+    color: $blue
+    text-align: center
+    &:hover
+      background-color: $blue
+      color: #fff
+    &:active
+      transition: none
+      background-color: darken($blue, 7)
+      border-color: darken($blue, 7)
+    &.button--arrow
+      padding: 0 7.291666667vw 0 2.083333333vw
+      text-align: left
+      &:hover
+        &:before
+          background-color: #fff
+        &:after
+          background-image: url('../img/icons/arrow-white.svg')
+      &:before
+        background-color: $blue
+        transition: all .3s ease
+      &:after
+        background-image: url('../img/icons/arrow-blue.svg')
+        transition: all .3s ease
 
 @media only screen and (max-width: $adaptive)
   .button

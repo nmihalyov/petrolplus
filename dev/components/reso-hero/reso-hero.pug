@@ -1,0 +1,22 @@
+include ../_ui/button/button
+
+mixin reso-hero
+  section.reso-hero.container
+    .reso-hero__wrapper.wrapper
+      .reso-hero__content
+        h1.reso-hero__heading Скидка 10% на&nbsp;страхование КАСКО
+        p.reso-hero__desc И самый низкий тариф по&nbsp;ОСАГО от наших друзей — РЕСО-Гарантия
+        +button-primary-arrow('link', 'Оставить заявку', 'hero__btn', {link: 'javascript:void(0)'})
+      .reso-hero__card
+        .reso-hero__card-item
+          .reso-hero__card-icon(data-icon="manager")
+          p.reso-hero__card-text Персональный менеджер в&nbsp;течение всего срока страхования
+        .reso-hero__card-item
+          .reso-hero__card-icon(data-icon="delivery")
+          p.reso-hero__card-text Мгновенная доставка полисов
+        .reso-hero__card-item
+          .reso-hero__card-icon(data-icon="remote")
+          p.reso-hero__card-text Удаленное урегулирование убытков
+        .reso-hero__card-item
+          .reso-hero__card-icon(data-icon="specialist")
+          p.reso-hero__card-text Выезд специалиста для осмотра автомобиля

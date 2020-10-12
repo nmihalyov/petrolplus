@@ -1,22 +1,16 @@
-include ../components/header/header
-include ../components/hero/hero
-include ../components/banner/banner
-include ../components/tabs/tabs
-include ../components/advantages/advantages
-include ../components/request/request
-
 doctype
 html(lang="ru", prefix="og: http://ogp.me/ns#")
   head
-    title Вездеход Online
+    title Разводящая страница
     include assets/_metas
     include assets/_links
     include assets/_scripts
   body
     .page-wrapper
-      +header
-      +hero
-      +banner
-      +tabs
-      +advantages
-      +request
+      .container
+        .wrapper
+          ul
+            li
+              a(href="oilcard.html") Топливная карта Вездеход Online
+            li
+              a(href="reso.html") РЕСО

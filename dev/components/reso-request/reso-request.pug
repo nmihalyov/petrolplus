@@ -1,0 +1,91 @@
+include ../_ui/button/button
+include ../_ui/input/input
+include ../_ui/checkbox/checkbox
+
+mixin reso-request
+  section.reso-request.container
+    .wrapper
+      .reso-request__heading
+        h2.reso-request__heading-title Блок преимуществ
+        +button-tertiary-arrow('link', 'Узнать подробнее', '', {link: '#'})
+      .advantages__grid
+        .advantages__item.js-advantage
+          .advantages__main
+            .advantages__icon(data-icon="sale")
+            p.advantages__heading 10%-скидка <br>на страхование КАСКО
+          .advantages__content
+            ul.advantages__list
+              li.advantages__list-item Получите полис сразу же после оплаты на e-mail.
+              li.advantages__list-item Электронный полис по юридической силе ничем не отличается от обычного бумажного.
+        .advantages__item.js-advantage
+          .advantages__main
+            .advantages__icon(data-icon="tariff")
+            p.advantages__heading Самый низкий тариф по&nbsp;ОСАГО
+          .advantages__content
+            ul.advantages__list
+              li.advantages__list-item Получите полис сразу же после оплаты на e-mail.
+              li.advantages__list-item Электронный полис по юридической силе ничем не отличается от обычного бумажного.
+        .advantages__item.js-advantage
+          .advantages__main
+            .advantages__icon(data-icon="support")
+            p.advantages__heading Персональный менеджер в&nbsp;течение всего <br>срока страхования
+          .advantages__content
+            ul.advantages__list
+              li.advantages__list-item Получите полис сразу же после оплаты на e-mail.
+              li.advantages__list-item Электронный полис по юридической силе ничем не отличается от обычного бумажного.
+        .advantages__item.js-advantage
+          .advantages__main
+            .advantages__icon(data-icon="fast")
+            p.advantages__heading Мгновенная <br>доставка полисов
+          .advantages__content
+            ul.advantages__list
+              li.advantages__list-item Получите полис сразу же после оплаты на e-mail.
+              li.advantages__list-item Электронный полис по юридической силе ничем не отличается от обычного бумажного.
+        .advantages__item.js-advantage
+          .advantages__main
+            .advantages__icon(data-icon="remote")
+            p.advantages__heading Удаленное <br>урегулирование убытков
+          .advantages__content
+            ul.advantages__list
+              li.advantages__list-item Получите полис сразу же после оплаты на e-mail.
+              li.advantages__list-item Электронный полис по юридической силе ничем не отличается от обычного бумажного.
+        .advantages__item.js-advantage
+          .advantages__main
+            .advantages__icon(data-icon="specialist")
+            p.advantages__heading Выезд специалиста для&nbsp;осмотра автомобиля
+          .advantages__content
+            ul.advantages__list
+              li.advantages__list-item Получите полис сразу же после оплаты на e-mail.
+              li.advantages__list-item Электронный полис по юридической силе ничем не отличается от обычного бумажного.
+      .request__content
+        p.request__heading Оставьте заявку, и получите ваш полис КАСКО
+        .reso-request__steps
+          .reso-request__step
+            .reso-request__step-icon
+              .reso-request__step-icon-img(data-icon="request")
+              .reso-request__step-icon-badge 1
+            p.reso-request__step-text Оставьте заявку
+          .reso-request__step
+            .reso-request__step-icon
+              .reso-request__step-icon-img(data-icon="manager")
+              .reso-request__step-icon-badge 2
+            p.reso-request__step-text Менеджер свяжется с вами, чтобы согласовать все детали*
+          .reso-request__step
+            .reso-request__step-icon
+              .reso-request__step-icon-img(data-icon="pay")
+              .reso-request__step-icon-badge 3
+            p.reso-request__step-text Получите ссылку на оплату или&nbsp;счет (для юр. лиц и ИП)
+          .reso-request__step
+            .reso-request__step-icon
+              .reso-request__step-icon-img(data-icon="recieve")
+              .reso-request__step-icon-badge 4
+            p.reso-request__step-text Оплатите и получите <br>полис на ваш e-mail**
+        form.request__form(action="")
+          .request__form-row
+            +input('text', 'name', 'Введите ваше имя', 'request__form-input', true)
+            +input('tel', 'phone', 'Введите телефон', 'request__form-input', true)
+          .request__form-row
+            +input('email', 'email', 'Введите ваш e-mail', 'request__form-input', true)
+            +button-primary('submit', 'Отправить заявку', 'request__form-btn')
+          +checkbox('policy', 'request__form-checkbox', true, true, 'Согласен с обработкой <a href="#">персональных данных</a>')
+      p.reso-request__disclaimer *Специальным предложением можно воспользоваться только через ППР. Скидка не применяется к уже застрахованным в РЕСО-Гарантия автомобилям.<br>**Электронный полис имеет равную юридическую силу с бумажным экземпляром.

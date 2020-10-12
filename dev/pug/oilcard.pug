@@ -1,0 +1,22 @@
+include ../components/header/header
+include ../components/hero/hero
+include ../components/banner/banner
+include ../components/tabs/tabs
+include ../components/advantages/advantages
+include ../components/request/request
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Вездеход Online
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header('Заказать карту')
+      +hero
+      +banner
+      +tabs
+      +advantages
+      +request

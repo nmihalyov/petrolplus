@@ -33,6 +33,7 @@
     background-color: #F0F9FA
   &__icon
     position: relative
+    flex-shrink: 0
     width: 4.479166667vw
     height: 4.479166667vw
     margin-right: 1.5625vw
@@ -56,6 +57,21 @@
     &[data-icon="support"]
       &:before
         background-image: url('../img/icons/support.svg')
+    &[data-icon="sale"]
+      &:before
+        background-image: url('../img/icons/sale.svg')
+    &[data-icon="tariff"]
+      &:before
+        background-image: url('../img/icons/tariff.svg')
+    &[data-icon="fast"]
+      &:before
+        background-image: url('../img/icons/fast.svg')
+    &[data-icon="remote"]
+      &:before
+        background-image: url('../img/icons/remote-2.svg')
+    &[data-icon="specialist"]
+      &:before
+        background-image: url('../img/icons/specialist.svg')
     &:before
       position: absolute
       content: ''
@@ -91,7 +107,7 @@
     margin: 0
     padding: 0
     line-height: 1.041666667vw
-    font-size: 0.9375vw
+    font-size: 0.78125vw
     &-item
       position: relative
       display: block
@@ -127,7 +143,7 @@
     &__main
       position: relative
       height: 23.125vw
-      padding: 2.5vw
+      padding: 2.5vw 10vw 2.5vw 2.5vw
       &:after
         content: ''
         display: block
@@ -153,7 +169,7 @@
         height: 12.5vw
     &__heading
       line-height: 1.25
-      font-size: 5vw
+      font-size: 3.75vw
     &__content
       position: static
       opacity: 1

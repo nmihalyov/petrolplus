@@ -1,0 +1,140 @@
+.reso-request
+  padding: 7.8125vw 0
+  &__heading
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 4.166666667vw
+    &-title
+      line-height: 1.125
+      font:
+        size: 4.166666667vw
+        weight: 800
+  &__steps
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 49.2247916667vw
+    margin: 0 auto 4.6875vw auto
+  &__step
+    position: relative
+    width: 11.45833333vw
+    &:not(:last-child)
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 1.71875vw
+        right: 0
+        right: -5.2vw
+        width: 9.375vw
+        height: 2px
+        background-color: #fff
+    &-icon
+      position: relative
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      width: 3.541666667vw
+      height: 3.541666667vw
+      margin: 0 auto 1.302083333vw auto
+      background-color: #fff
+      border-radius: 50%
+      &-img
+        width: 1.40625vw
+        height: 1.40625vw
+        margin-top: 0.2083333333vw
+        background:
+          size: contain
+          position: center
+          repeat: no-repeat
+        &[data-icon="request"]
+          background-image: url('../img/icons/request-black.svg')
+        &[data-icon="manager"]
+          background-image: url('../img/icons/manager-black.svg')
+        &[data-icon="pay"]
+          background-image: url('../img/icons/pay-black.svg')
+        &[data-icon="recieve"]
+          background-image: url('../img/icons/recieve-black.svg')
+      &-badge
+        position: absolute
+        top: -0.4166666667vw
+        right: -0.3125vw
+        width: 1.40625vw
+        height: 1.40625vw
+        background-color: $blue
+        border-radius: 50%
+        color: #fff
+        text-align: center
+        line-height: 1.40625vw
+        font-size: 0.78125vw
+    &-text
+      text-align: center
+      line-height: 1.33
+      font-size: 0.78125vw
+  &__disclaimer
+    opacity: 0.7
+    margin-top: 3.645833333vw
+    text-align: center
+    color: #636363
+    line-height: 1.33
+    font-size: 0.78125vw
+  .request__content
+    margin-top: 6.25vw
+
+@media only screen and (max-width: $adaptive)
+  .reso-request
+    padding: 12.5vw 0
+    &__heading
+      &-title
+        margin-bottom: 6.25vw
+        text-align: center
+        font-size: 9.375vw
+      .button
+        display: none
+    &__steps
+      flex-flow: column nowrap
+      width: 100%
+      margin: 0
+      padding: 0 0 15.625vw 3.125vw
+    &__step
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 12.5vw
+        &:after
+          left: 10.625vw
+          top: auto
+          bottom: -12.5vw
+          width: 2px
+          height: 12.5vw
+      &-icon
+        flex-shrink: 0
+        width: 21.25vw
+        height: 21.25vw
+        margin: 0 6.25vw 0 0
+        &-img
+          width: 8.4375vw
+          height: 8.4375vw
+          margin-top: 1.25vw
+        &-badge
+          top: 0.3125vw
+          right: 0.9375vw
+          width: 6.25vw
+          height: 6.25vw
+          line-height: 6.25vw
+          font-size: 3.75vw
+      &-text
+        text-align: left
+        line-height: 1.25
+        font-size: 3.75vw
+    &__disclaimer
+      margin-top: 10.9375vw
+      line-height: 1.25
+      font-size: 3.75vw
